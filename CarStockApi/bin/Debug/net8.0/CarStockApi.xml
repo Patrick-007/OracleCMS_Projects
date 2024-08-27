@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarStockApi</name>
+    </assembly>
+    <members>
+        <member name="M:CarStockApi.Controllers.CarsController.GetCars(System.Int32)">
+            <summary>
+            Retrieve the stocklist for the dealer.
+            </summary>
+            <param name="dealerId">The unique identifier of the dealer.</param>
+            <returns>A stocklist of cars with Make, Model, Year, and StockLevel.</returns>
+            <response code="200">Returns the stocklist for the dealer.</response>
+        </member>
+        <member name="M:CarStockApi.Controllers.CarsController.AddCar(System.Int32,CarStockApi.Models.Car)">
+            <summary>
+            Add a new car to the dealer's stock.
+            </summary>
+            <param name="dealerId">The unique identifier of the dealer.</param>
+            <param name="car">The car object to be added.</param>
+            <returns>The newly created car object.</returns>
+            <response code="201">Returns the newly created car.</response>
+        </member>
+        <member name="M:CarStockApi.Controllers.CarsController.GetCar(System.Int32,System.Int32)">
+            <summary>
+            Retrieve a specific car by its ID for the dealer.
+            </summary>
+            <param name="dealerId">The unique identifier of the dealer.</param>
+            <param name="carId">The unique identifier of the car.</param>
+            <returns>The requested car object.</returns>
+            <response code="200">Returns the requested car.</response>
+            <response code="404">If the car is not found.</response>
+        </member>
+        <member name="M:CarStockApi.Controllers.CarsController.UpdateCar(System.Int32,System.Int32,CarStockApi.Models.Car)">
+            <summary>
+            Update information of an existing car in the dealer's stock.
+            </summary>
+            <param name="dealerId">The unique identifier of the dealer.</param>
+            <param name="carId">The unique identifier of the car to be updated.</param>
+            <param name="car">The updated car object.</param>
+            <returns>An HTTP status code indicating the result of the operation.</returns>
+            <response code="204">Indicates that the car was successfully updated.</response>
+            <response code="404">If the car is not found.</response>
+        </member>
+        <member name="M:CarStockApi.Controllers.CarsController.DeleteCar(System.Int32,System.Int32)">
+            <summary>
+            Remove a car from the dealer's stock.
+            </summary>
+            <param name="dealerId">The unique identifier of the dealer.</param>
+            <param name="carId">The unique identifier of the car to be removed.</param>
+            <returns>An HTTP status code indicating the result of the operation.</returns>
+            <response code="204">Indicates that the car was successfully removed.</response>
+            <response code="404">If the car is not found.</response>
+        </member>
+        <member name="M:CarStockApi.Controllers.CarsController.SearchCars(System.Int32,System.String,System.String)">
+            <summary>
+            Search for cars by make and model for the dealer.
+            </summary>
+            <param name="dealerId">The unique identifier of the dealer.</param>
+            <param name="make">The make of the car.</param>
+            <param name="model">The model of the car.</param>
+            <returns>A list of cars matching the search criteria.</returns>
+            <response code="200">Returns the list of matching cars.</response>
+        </member>
+    </members>
+</doc>

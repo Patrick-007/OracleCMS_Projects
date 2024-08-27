@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "shgSvsQUWIkRpcGKxB9XYtW/MJCD2IRyDQo/T0kPTYM=",
+  "Source": "CarStockApi",
+  "BasePath": "_content/CarStockApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
