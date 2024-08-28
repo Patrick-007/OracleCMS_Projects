@@ -1,27 +1,27 @@
-# Use the official .NET SDK 8.0 image as the base image for building the application
+# Use the official .NET SDK image as the base image for building the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Set the working directory in the container
-WORKDIR /src
+WORKDIR /app
 
 # Copy the project file from the CarStockApi folder and restore any dependencies (via NuGet)
-COPY CarStockApi/CarStockApi.csproj ./
-RUN dotnet restore
+COPY CarStockApi/CarStockApi.csproj ./CarStockApi/
+RUN dotnet restore ./CarStockApi/CarStockApi.csproj
 
 # Copy the rest of the application source code from the CarStockApi folder and build it
-COPY /CarStockApi ./
-RUN dotnet publish -c Release -o /app --no-restore
+COPY CarStockApi/. ./CarStockApi/
+RUN dotnet publish ./CarStockApi/CarStockApi.csproj -c Release -o /app/publish
 
-# Use the official .NET 8.0 runtime image as the base image for the final stage
+# Use the official .NET runtime image as the base image for the final stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 
 # Set the working directory in the container
 WORKDIR /app
 
 # Copy the published application from the build stage
-COPY --from=build /app ./
+COPY --from=build /app/publish .
 
-# Inform Docker that the container listens on port 80
+# Inform Docker that the container listens on port 8080
 EXPOSE 80
 
 # Run the application

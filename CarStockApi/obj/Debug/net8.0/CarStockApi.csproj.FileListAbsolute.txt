@@ -33,3 +33,4 @@
 /Users/lileting/Downloads/OracleCMS_Projects/CarStockApi/obj/Debug/net8.0/ref/CarStockApi.dll
 /Users/lileting/Downloads/OracleCMS_Projects/CarStockApi/bin/Debug/net8.0/CarStockApi.xml
 /Users/lileting/Downloads/OracleCMS_Projects/CarStockApi/obj/Debug/net8.0/CarStockApi.xml
+/Users/lileting/Downloads/OracleCMS_Projects/CarStockApi/obj/Debug/net8.0/CarStockApi.sourcelink.json
