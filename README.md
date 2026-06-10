@@ -1,4 +1,4 @@
-# OracleCMS CarStockApi
+# CarStockApi
 
 CarStockApi is a .NET Core Web API that allows car dealers to manage their car stock. 
 
